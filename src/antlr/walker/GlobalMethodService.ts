@@ -2,7 +2,11 @@ import RuntimeError from './RuntimeError';
 import PlaygroundTreeWalker from './PlaygroundTreeWalker';
 import StaticMethodCallNode from '../nodes/StaticMethodCallNode';
 import { Scope } from './ScopeManager';
-import { isIdentifierNode, isExpressionNode } from '../NodeTypes';
+import {
+  isIdentifierNode,
+  isExpressionNode,
+  isObjectIdentifierNode,
+} from '../NodeTypes';
 
 const globalMethods: Record<string, (...args: any[]) => any> = {
   print: (text: any) => console.log(text),
@@ -19,6 +23,14 @@ export default class GlobalMethodService {
     const method = node.getMethodName();
 
     const params = node.getParams().map((param) => {
+      if (isObjectIdentifierNode(param)) {
+        return this.walker.getVariableInScope(
+          scope,
+          param.getObjectName(),
+          node,
+        ).value;
+      }
+
       if (isIdentifierNode(param)) {
         return this.walker.getVariableInScope(scope, param.getValue(), node)
           .value;
@@ -28,7 +40,7 @@ export default class GlobalMethodService {
         return this.walker.calculateExpression(param, scope);
       }
 
-      return param.getValue();
+      throw new Error('Unknown param type');
     });
 
     return this.invokeMethod(method, params, node);

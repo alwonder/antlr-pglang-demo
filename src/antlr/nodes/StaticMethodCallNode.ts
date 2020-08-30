@@ -1,16 +1,17 @@
 import IdentifierNode from '@/antlr/nodes/IdentifierNode';
 import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
 import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
-import { NodeTypes } from '@/antlr/NodeTypes';
+import { NodeTypes, isObjectIdentifierNode } from '@/antlr/NodeTypes';
 import ExpressionNode from './expression/ExpressionNode';
 import {
   StatementNameProvider,
   StatementParamProvider,
 } from './StatementNameProvider';
+import ObjectIdentifierNode from './ObjectIdentifierNode';
 
 export interface StaticMethodCallNodeProps {
   method: string;
-  params: (IdentifierNode | LiteralNode | ExpressionNode)[];
+  params: (ObjectIdentifierNode | LiteralNode | ExpressionNode)[];
 }
 
 export default class StaticMethodCallNode
@@ -20,7 +21,7 @@ export default class StaticMethodCallNode
 
   private method: string;
 
-  children!: (IdentifierNode | LiteralNode)[];
+  children!: (ObjectIdentifierNode | IdentifierNode | LiteralNode)[];
 
   constructor(props: StaticMethodCallNodeProps, line: number) {
     super(props.params, line);
@@ -29,7 +30,13 @@ export default class StaticMethodCallNode
   }
 
   hasSomeParameters(params: any[]): boolean {
-    return this.getParams().some((param) => params.includes(param.getValue()));
+    return this.getParams().some((param) =>
+      params.includes(
+        isObjectIdentifierNode(param)
+          ? param.getObjectName()
+          : param.getValue(),
+      ),
+    );
   }
 
   getStatementName() {
@@ -40,7 +47,7 @@ export default class StaticMethodCallNode
     return this.method;
   }
 
-  getParams(): (IdentifierNode | LiteralNode)[] {
+  getParams(): (ObjectIdentifierNode | IdentifierNode | LiteralNode)[] {
     return this.children;
   }
 

@@ -5,6 +5,8 @@ import {
   StaticMethodCallContext,
   ExpressionParamContext,
   ExpressionContext,
+  IdentifierParamContext,
+  ObjectIdentifierContext,
 } from '@/antlr/generated/PlaygroundParser';
 import IdentifierNode from '@/antlr/nodes/IdentifierNode';
 import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
@@ -15,6 +17,8 @@ import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
 import ExpressionVisitor from '@/antlr/visitors/ExpressionVisitor';
 import LiteralVisitor from '@/antlr/visitors/LiteralVisitor';
 import ExpressionNode from '../nodes/expression/ExpressionNode';
+import ObjectVisitor from './ObjectVisitor';
+import ObjectIdentifierNode from '../nodes/ObjectIdentifierNode';
 
 export default class StaticMethodCallVisitor {
   static visitStaticMethodCall(
@@ -35,7 +39,12 @@ export default class StaticMethodCallVisitor {
 
   private static visitMethodParam(
     ctx: MethodParamContext,
-  ): IdentifierNode | LiteralNode | ExpressionNode {
+  ): ObjectIdentifierNode | LiteralNode | ExpressionNode {
+    if (ctx instanceof IdentifierParamContext) {
+      const identifier: ObjectIdentifierContext = ctx.objectIdentifier();
+      return ObjectVisitor.visitObjectIdentifier(identifier);
+    }
+
     if (ctx instanceof LiteralParamContext) {
       const literal: LiteralContext = ctx.literal();
       return LiteralVisitor.visitLiteral(literal);
