@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --hot --inline --watch",
     "build": "NODE_ENV=production webpack",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
+    "antlr:generate": "./node_modules/.bin/antlr4-tool -l ts --no-listener -o src/antlr/generated src/antlr/Playground.g4"
   },
   "keywords": [
     "antlr",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
+    "antlr4-tool": "^1.1.1",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
