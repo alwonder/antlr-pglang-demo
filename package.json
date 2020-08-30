@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --hot --inline --watch",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "keywords": [
     "antlr",
