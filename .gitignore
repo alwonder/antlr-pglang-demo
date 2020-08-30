@@ -1,6 +1,7 @@
 # Project Specific
 stats.json
 dist
+src/antlr/.antlr
 
 # Logs
 logs
