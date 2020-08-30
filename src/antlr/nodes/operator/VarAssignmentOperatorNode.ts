@@ -1,6 +1,6 @@
-import OperatorNode from 'antlr/nodes/operator/OperatorNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import OperatorNode from '@/antlr/nodes/operator/OperatorNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export type VarAssignmentOperator = '=' | '-=' | '+=';
 

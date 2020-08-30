@@ -1,7 +1,7 @@
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import ScopeNode from 'antlr/nodes/ScopeNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import ScopeNode from '@/antlr/nodes/ScopeNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 import { StatementNameProvider } from './StatementNameProvider';
 
 export interface EventStatementNodeProps {

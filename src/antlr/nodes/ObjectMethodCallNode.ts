@@ -1,8 +1,8 @@
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import LiteralNode from 'antlr/nodes/literal/LiteralNode';
-import ObjectIdentifierNode from 'antlr/nodes/ObjectIdentifierNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
+import ObjectIdentifierNode from '@/antlr/nodes/ObjectIdentifierNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 import ExpressionNode from './expression/ExpressionNode';
 import {
   StatementNameProvider,

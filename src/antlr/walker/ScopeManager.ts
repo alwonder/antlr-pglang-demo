@@ -1,8 +1,8 @@
-import ScopeNode from 'antlr/nodes/ScopeNode';
-import VarAssignmentNode from 'antlr/nodes/VarAssignmentNode';
-import VarDeclarationNode from 'antlr/nodes/VarDeclarationNode';
-import PlaygroundTreeWalker from 'antlr/walker/PlaygroundTreeWalker';
-import { PlaygroundWalkerModule } from 'antlr/walker/PlaygroundWalkerModule';
+import ScopeNode from '@/antlr/nodes/ScopeNode';
+import VarAssignmentNode from '@/antlr/nodes/VarAssignmentNode';
+import VarDeclarationNode from '@/antlr/nodes/VarDeclarationNode';
+import PlaygroundTreeWalker from '@/antlr/walker/PlaygroundTreeWalker';
+import { PlaygroundWalkerModule } from '@/antlr/walker/PlaygroundWalkerModule';
 import RuntimeError from './RuntimeError';
 import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
 

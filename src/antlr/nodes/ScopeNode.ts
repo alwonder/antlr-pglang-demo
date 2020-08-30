@@ -1,6 +1,6 @@
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import VarDeclarationNode from 'antlr/nodes/VarDeclarationNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import VarDeclarationNode from '@/antlr/nodes/VarDeclarationNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export default class ScopeNode extends PlaygroundNode {
   readonly nodeType = NodeTypes.SCOPE;

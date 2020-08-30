@@ -1,21 +1,21 @@
 import ArithmeticOperatorNode, {
   isArithmeticOperator,
-} from 'antlr/nodes/operator/ArithmeticOperatorNode';
+} from '@/antlr/nodes/operator/ArithmeticOperatorNode';
 import BooleanOperatorNode, {
   isBooleanOperator,
-} from 'antlr/nodes/operator/BooleanOperatorNode';
+} from '@/antlr/nodes/operator/BooleanOperatorNode';
 import ComparisonOperatorNode, {
   isComparisonOperator,
-} from 'antlr/nodes/operator/ComparisonOperatorNode';
-import OperatorNode from 'antlr/nodes/operator/OperatorNode';
+} from '@/antlr/nodes/operator/ComparisonOperatorNode';
+import OperatorNode from '@/antlr/nodes/operator/OperatorNode';
 import UnaryOperatorNode, {
   isUnaryOperator,
-} from 'antlr/nodes/operator/UnaryOperatorNode';
+} from '@/antlr/nodes/operator/UnaryOperatorNode';
 import VarAssignmentOperatorNode, {
   isVarAssignmentOperator,
-} from 'antlr/nodes/operator/VarAssignmentOperatorNode';
+} from '@/antlr/nodes/operator/VarAssignmentOperatorNode';
 import { TerminalNodeImpl } from 'antlr4/tree/Tree';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
 
 export default class OperatorVisitor {
   static visitOperator(ctx: TerminalNodeImpl): OperatorNode {

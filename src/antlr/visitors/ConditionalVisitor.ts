@@ -4,14 +4,14 @@ import {
   ElseIfConditionalContext,
   ScopeContext,
   ThenConditionalContext,
-} from 'antlr/generated/PlaygroundParser';
-import ConditionalNode from 'antlr/nodes/conditional/ConditionalNode';
-import ElseConditionalNode from 'antlr/nodes/conditional/ElseConditionalNode';
-import ElseIfConditionalNode from 'antlr/nodes/conditional/ElseIfConditionalNode';
-import ThenConditionalNode from 'antlr/nodes/conditional/ThenConditionalNode';
-import ExpressionVisitor from 'antlr/visitors/ExpressionVisitor';
-import PlaygroundCustomVisitor from 'antlr/visitors/PlaygroundCustomVisitor';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
+} from '@/antlr/generated/PlaygroundParser';
+import ConditionalNode from '@/antlr/nodes/conditional/ConditionalNode';
+import ElseConditionalNode from '@/antlr/nodes/conditional/ElseConditionalNode';
+import ElseIfConditionalNode from '@/antlr/nodes/conditional/ElseIfConditionalNode';
+import ThenConditionalNode from '@/antlr/nodes/conditional/ThenConditionalNode';
+import ExpressionVisitor from '@/antlr/visitors/ExpressionVisitor';
+import PlaygroundCustomVisitor from '@/antlr/visitors/PlaygroundCustomVisitor';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
 
 export default class ConditionalVisitor {
   static visitConditional(ctx: ConditionalStatementContext): ConditionalNode {

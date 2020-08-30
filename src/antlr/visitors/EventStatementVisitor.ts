@@ -1,12 +1,12 @@
 import {
   EventParamsContext,
   EventStatementContext,
-} from 'antlr/generated/PlaygroundParser';
+} from '@/antlr/generated/PlaygroundParser';
 import EventStatementNode, {
   EventStatementNodeProps,
-} from 'antlr/nodes/EventStatementNode';
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import PlaygroundCustomVisitor from 'antlr/visitors/PlaygroundCustomVisitor';
+} from '@/antlr/nodes/EventStatementNode';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import PlaygroundCustomVisitor from '@/antlr/visitors/PlaygroundCustomVisitor';
 import { TerminalNode } from 'antlr4/tree/Tree';
 
 export default class EventStatementVisitor {

@@ -1,8 +1,8 @@
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import TwoMembersExpressionNode from 'antlr/nodes/expression/TwoMembersExpressionNode';
-import BooleanOperatorNode from 'antlr/nodes/operator/BooleanOperatorNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import TwoMembersExpressionNode from '@/antlr/nodes/expression/TwoMembersExpressionNode';
+import BooleanOperatorNode from '@/antlr/nodes/operator/BooleanOperatorNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export interface BooleanExpressionNodeProps {
   firstOperand: ExpressionNode;

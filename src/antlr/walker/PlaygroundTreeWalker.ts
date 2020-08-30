@@ -1,8 +1,8 @@
-import EventStatementNode from 'antlr/nodes/EventStatementNode';
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import RootNode from 'antlr/nodes/RootNode';
-import ScopeNode from 'antlr/nodes/ScopeNode';
+import EventStatementNode from '@/antlr/nodes/EventStatementNode';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import RootNode from '@/antlr/nodes/RootNode';
+import ScopeNode from '@/antlr/nodes/ScopeNode';
 import {
   isConditionalNode,
   isEventStatementNode,
@@ -14,12 +14,12 @@ import {
   isVarDeclarationNode,
   isObjectPropertyAssignmentNode,
   isWhileStatementNode,
-} from 'antlr/NodeTypes';
-import ConditionalWalker from 'antlr/walker/ConditionalWalker';
-import ExpressionWalker from 'antlr/walker/ExpressionWalker';
-import FunctionManager from 'antlr/walker/FunctionManager';
-import LoopWalker from 'antlr/walker/LoopWalker';
-import ScopeManager, { Scope } from 'antlr/walker/ScopeManager';
+} from '@/antlr/NodeTypes';
+import ConditionalWalker from '@/antlr/walker/ConditionalWalker';
+import ExpressionWalker from '@/antlr/walker/ExpressionWalker';
+import FunctionManager from '@/antlr/walker/FunctionManager';
+import LoopWalker from '@/antlr/walker/LoopWalker';
+import ScopeManager, { Scope } from '@/antlr/walker/ScopeManager';
 
 export default class PlaygroundTreeWalker {
   public readonly tree: RootNode;

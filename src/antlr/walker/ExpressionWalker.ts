@@ -1,18 +1,18 @@
-import ArithmeticExpressionNode from 'antlr/nodes/expression/ArithmeticExpressionNode';
-import BooleanExpressionNode from 'antlr/nodes/expression/BooleanExpressionNode';
-import ComparisonExpressionNode from 'antlr/nodes/expression/ComparisonExpressionNode';
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
+import ArithmeticExpressionNode from '@/antlr/nodes/expression/ArithmeticExpressionNode';
+import BooleanExpressionNode from '@/antlr/nodes/expression/BooleanExpressionNode';
+import ComparisonExpressionNode from '@/antlr/nodes/expression/ComparisonExpressionNode';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
 // tslint:disable-next-line:max-line-length
-import ParenthesesExpressionNode from 'antlr/nodes/expression/ParenthesesExpressionNode';
-import PrimaryExpressionNode from 'antlr/nodes/expression/PrimaryExpressionNode';
-import UnaryExpressionNode from 'antlr/nodes/expression/UnaryExpressionNode';
-import PlaygroundTreeWalker from 'antlr/walker/PlaygroundTreeWalker';
-import { PlaygroundWalkerModule } from 'antlr/walker/PlaygroundWalkerModule';
-import { Scope } from 'antlr/walker/ScopeManager';
-import MethodCallExpressionNode from 'antlr/nodes/expression/MethodCallExpressionNode';
-import { isLiteralNode, isIdentifierNode } from 'antlr/NodeTypes';
-import ObjectPropExpressionNode from 'antlr/nodes/expression/ObjectPropExpressionNode';
-import StaticMethodCallExpressionNode from 'antlr/nodes/expression/StaticMethodCallExpressionNode';
+import ParenthesesExpressionNode from '@/antlr/nodes/expression/ParenthesesExpressionNode';
+import PrimaryExpressionNode from '@/antlr/nodes/expression/PrimaryExpressionNode';
+import UnaryExpressionNode from '@/antlr/nodes/expression/UnaryExpressionNode';
+import PlaygroundTreeWalker from '@/antlr/walker/PlaygroundTreeWalker';
+import { PlaygroundWalkerModule } from '@/antlr/walker/PlaygroundWalkerModule';
+import { Scope } from '@/antlr/walker/ScopeManager';
+import MethodCallExpressionNode from '@/antlr/nodes/expression/MethodCallExpressionNode';
+import { isLiteralNode, isIdentifierNode } from '@/antlr/NodeTypes';
+import ObjectPropExpressionNode from '@/antlr/nodes/expression/ObjectPropExpressionNode';
+import StaticMethodCallExpressionNode from '@/antlr/nodes/expression/StaticMethodCallExpressionNode';
 
 export default class ExpressionWalker implements PlaygroundWalkerModule {
   readonly walker: PlaygroundTreeWalker;

@@ -1,5 +1,5 @@
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export default class ObjectIdentifierNode extends PlaygroundNode {
   readonly nodeType = NodeTypes.OBJECT_IDENTIFIER;

@@ -1,7 +1,7 @@
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
-import ObjectPropertyNode from 'antlr/nodes/ObjectPropertyNode';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
+import ObjectPropertyNode from '@/antlr/nodes/ObjectPropertyNode';
 import VarAssignmentOperatorNode from './operator/VarAssignmentOperatorNode';
 import { StatementNameProvider } from './StatementNameProvider';
 

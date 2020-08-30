@@ -1,6 +1,6 @@
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import ScopeNode from 'antlr/nodes/ScopeNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import ScopeNode from '@/antlr/nodes/ScopeNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export default class RootNode extends PlaygroundNode {
   readonly nodeType = NodeTypes.ROOT;

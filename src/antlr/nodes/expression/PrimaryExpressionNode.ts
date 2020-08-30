@@ -1,8 +1,8 @@
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import LiteralNode from 'antlr/nodes/literal/LiteralNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export default class PrimaryExpressionNode
   extends PlaygroundNode

@@ -1,8 +1,8 @@
-import ConditionalNode from 'antlr/nodes/conditional/ConditionalNode';
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import ScopeNode from 'antlr/nodes/ScopeNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import ConditionalNode from '@/antlr/nodes/conditional/ConditionalNode';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import ScopeNode from '@/antlr/nodes/ScopeNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export interface ElseIfConditionalNodeProps {
   condition: ExpressionNode;

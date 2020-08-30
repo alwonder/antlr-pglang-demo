@@ -1,9 +1,9 @@
-import PlaygroundTreeWalker from 'antlr/walker/PlaygroundTreeWalker';
-import { PlaygroundWalkerModule } from 'antlr/walker/PlaygroundWalkerModule';
-import LoopStatementNode from 'antlr/nodes/LoopStatementNode';
-import CountControlledLoop from 'antlr/walker/loop/CountControlledLoop';
-import { Scope } from 'antlr/walker/ScopeManager';
-import WhileStatementNode from 'antlr/nodes/WhileStatementNode';
+import PlaygroundTreeWalker from '@/antlr/walker/PlaygroundTreeWalker';
+import { PlaygroundWalkerModule } from '@/antlr/walker/PlaygroundWalkerModule';
+import LoopStatementNode from '@/antlr/nodes/LoopStatementNode';
+import CountControlledLoop from '@/antlr/walker/loop/CountControlledLoop';
+import { Scope } from '@/antlr/walker/ScopeManager';
+import WhileStatementNode from '@/antlr/nodes/WhileStatementNode';
 import WhileLoop from './loop/WhileLoop';
 
 export default class LoopWalker implements PlaygroundWalkerModule {

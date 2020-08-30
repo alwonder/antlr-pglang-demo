@@ -1,10 +1,10 @@
-import { LiteralContext } from 'antlr/generated/PlaygroundParser';
-import BooleanLiteralNode from 'antlr/nodes/literal/BooleanLiteralNode';
-import ConstantLiteralNode from 'antlr/nodes/literal/ConstantLiteralNode';
-import LiteralNode from 'antlr/nodes/literal/LiteralNode';
-import NumberLiteralNode from 'antlr/nodes/literal/NumberLiteralNode';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
-import StringLiteralNode from 'antlr/nodes/literal/StringLiteralNode';
+import { LiteralContext } from '@/antlr/generated/PlaygroundParser';
+import BooleanLiteralNode from '@/antlr/nodes/literal/BooleanLiteralNode';
+import ConstantLiteralNode from '@/antlr/nodes/literal/ConstantLiteralNode';
+import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
+import NumberLiteralNode from '@/antlr/nodes/literal/NumberLiteralNode';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
+import StringLiteralNode from '@/antlr/nodes/literal/StringLiteralNode';
 
 export default class LiteralVisitor {
   static visitLiteral(ctx: LiteralContext): LiteralNode {

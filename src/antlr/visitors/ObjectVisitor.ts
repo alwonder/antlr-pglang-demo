@@ -9,19 +9,19 @@ import {
   ObjectPropertyContext,
   ExpressionParamContext,
   ExpressionContext,
-} from 'antlr/generated/PlaygroundParser';
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import LiteralNode from 'antlr/nodes/literal/LiteralNode';
+} from '@/antlr/generated/PlaygroundParser';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
 import ObjectMethodCallNode, {
   ObjectMethodCallNodeProps,
-} from 'antlr/nodes/ObjectMethodCallNode';
-import ObjectPropertyAssignmentNode from 'antlr/nodes/ObjectPropertyAssignmentNode';
-import ObjectPropertyNode from 'antlr/nodes/ObjectPropertyNode';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
-import ExpressionVisitor from 'antlr/visitors/ExpressionVisitor';
-import LiteralVisitor from 'antlr/visitors/LiteralVisitor';
-import PlaygroundCustomVisitor from 'antlr/visitors/PlaygroundCustomVisitor';
-import ObjectIdentifierNode from 'antlr/nodes/ObjectIdentifierNode';
+} from '@/antlr/nodes/ObjectMethodCallNode';
+import ObjectPropertyAssignmentNode from '@/antlr/nodes/ObjectPropertyAssignmentNode';
+import ObjectPropertyNode from '@/antlr/nodes/ObjectPropertyNode';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
+import ExpressionVisitor from '@/antlr/visitors/ExpressionVisitor';
+import LiteralVisitor from '@/antlr/visitors/LiteralVisitor';
+import PlaygroundCustomVisitor from '@/antlr/visitors/PlaygroundCustomVisitor';
+import ObjectIdentifierNode from '@/antlr/nodes/ObjectIdentifierNode';
 import ExpressionNode from '../nodes/expression/ExpressionNode';
 import OperatorVisitor from './OperatorVisitor';
 import VarAssignmentOperatorNode from '../nodes/operator/VarAssignmentOperatorNode';

@@ -1,8 +1,8 @@
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import TwoMembersExpressionNode from 'antlr/nodes/expression/TwoMembersExpressionNode';
-import ComparisonOperatorNode from 'antlr/nodes/operator/ComparisonOperatorNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import TwoMembersExpressionNode from '@/antlr/nodes/expression/TwoMembersExpressionNode';
+import ComparisonOperatorNode from '@/antlr/nodes/operator/ComparisonOperatorNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export interface ComparisonExpressionNodeProps {
   firstOperand: ExpressionNode;

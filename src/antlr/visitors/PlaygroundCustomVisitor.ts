@@ -5,20 +5,20 @@ import {
   StatementContext,
   VarAssignmentContext,
   VarDeclarationContext,
-} from 'antlr/generated/PlaygroundParser';
-import { PlaygroundVisitor } from 'antlr/generated/PlaygroundVisitor';
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import RootNode from 'antlr/nodes/RootNode';
-import ScopeNode from 'antlr/nodes/ScopeNode';
-import VarAssignmentNode from 'antlr/nodes/VarAssignmentNode';
+} from '@/antlr/generated/PlaygroundParser';
+import { PlaygroundVisitor } from '@/antlr/generated/PlaygroundVisitor';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import RootNode from '@/antlr/nodes/RootNode';
+import ScopeNode from '@/antlr/nodes/ScopeNode';
+import VarAssignmentNode from '@/antlr/nodes/VarAssignmentNode';
 import VarDeclarationNode, {
   VarDeclarationNodeProps,
-} from 'antlr/nodes/VarDeclarationNode';
-import ExpressionVisitor from 'antlr/visitors/ExpressionVisitor';
-import StatementVisitor from 'antlr/visitors/StatementVisitor';
+} from '@/antlr/nodes/VarDeclarationNode';
+import ExpressionVisitor from '@/antlr/visitors/ExpressionVisitor';
+import StatementVisitor from '@/antlr/visitors/StatementVisitor';
 import { TerminalNode } from 'antlr4/tree/Tree';
-import VarAssignmentOperatorNode from 'antlr/nodes/operator/VarAssignmentOperatorNode';
-import OperatorVisitor from 'antlr/visitors/OperatorVisitor';
+import VarAssignmentOperatorNode from '@/antlr/nodes/operator/VarAssignmentOperatorNode';
+import OperatorVisitor from '@/antlr/visitors/OperatorVisitor';
 
 /**
  * This is the entry point for processing ANTLR Playground parser tree. When the user code

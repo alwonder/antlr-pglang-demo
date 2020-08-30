@@ -1,6 +1,6 @@
-import LoopWalker from 'antlr/walker/LoopWalker';
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import { Scope } from 'antlr/walker/ScopeManager';
+import LoopWalker from '@/antlr/walker/LoopWalker';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import { Scope } from '@/antlr/walker/ScopeManager';
 import { Loop } from './Loop';
 
 export default class WhileLoop implements Loop {

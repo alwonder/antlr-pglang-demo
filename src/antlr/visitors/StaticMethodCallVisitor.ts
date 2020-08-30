@@ -5,15 +5,15 @@ import {
   StaticMethodCallContext,
   ExpressionParamContext,
   ExpressionContext,
-} from 'antlr/generated/PlaygroundParser';
-import IdentifierNode from 'antlr/nodes/IdentifierNode';
-import LiteralNode from 'antlr/nodes/literal/LiteralNode';
+} from '@/antlr/generated/PlaygroundParser';
+import IdentifierNode from '@/antlr/nodes/IdentifierNode';
+import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
 import StaticMethodCallNode, {
   StaticMethodCallNodeProps,
-} from 'antlr/nodes/StaticMethodCallNode';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
-import ExpressionVisitor from 'antlr/visitors/ExpressionVisitor';
-import LiteralVisitor from 'antlr/visitors/LiteralVisitor';
+} from '@/antlr/nodes/StaticMethodCallNode';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
+import ExpressionVisitor from '@/antlr/visitors/ExpressionVisitor';
+import LiteralVisitor from '@/antlr/visitors/LiteralVisitor';
 import ExpressionNode from '../nodes/expression/ExpressionNode';
 
 export default class StaticMethodCallVisitor {

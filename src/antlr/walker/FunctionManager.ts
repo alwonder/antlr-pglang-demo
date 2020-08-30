@@ -1,8 +1,8 @@
-import { PlaygroundWalkerModule } from 'antlr/walker/PlaygroundWalkerModule';
-import PlaygroundTreeWalker from 'antlr/walker/PlaygroundTreeWalker';
-import EventStatementNode from 'antlr/nodes/EventStatementNode';
-import { isEventStatementNode } from 'antlr/NodeTypes';
-import { Scope } from 'antlr/walker/ScopeManager';
+import { PlaygroundWalkerModule } from '@/antlr/walker/PlaygroundWalkerModule';
+import PlaygroundTreeWalker from '@/antlr/walker/PlaygroundTreeWalker';
+import EventStatementNode from '@/antlr/nodes/EventStatementNode';
+import { isEventStatementNode } from '@/antlr/NodeTypes';
+import { Scope } from '@/antlr/walker/ScopeManager';
 import RuntimeError from './RuntimeError';
 
 export interface Invocation {

@@ -1,7 +1,7 @@
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import StaticMethodCallNode from 'antlr/nodes/StaticMethodCallNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import StaticMethodCallNode from '@/antlr/nodes/StaticMethodCallNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export default class MethodCallExpressionNode
   extends PlaygroundNode

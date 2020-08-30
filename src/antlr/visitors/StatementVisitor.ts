@@ -1,11 +1,11 @@
-import { StatementContext } from 'antlr/generated/PlaygroundParser';
-import ConditionalVisitor from 'antlr/visitors/ConditionalVisitor';
-import EventStatementVisitor from 'antlr/visitors/EventStatementVisitor';
-import LoopStatementVisitor from 'antlr/visitors/LoopStatementVisitor';
-import ObjectVisitor from 'antlr/visitors/ObjectVisitor';
-import PlaygroundCustomVisitor from 'antlr/visitors/PlaygroundCustomVisitor';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
-import StaticMethodCallVisitor from 'antlr/visitors/StaticMethodCallVisitor';
+import { StatementContext } from '@/antlr/generated/PlaygroundParser';
+import ConditionalVisitor from '@/antlr/visitors/ConditionalVisitor';
+import EventStatementVisitor from '@/antlr/visitors/EventStatementVisitor';
+import LoopStatementVisitor from '@/antlr/visitors/LoopStatementVisitor';
+import ObjectVisitor from '@/antlr/visitors/ObjectVisitor';
+import PlaygroundCustomVisitor from '@/antlr/visitors/PlaygroundCustomVisitor';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
+import StaticMethodCallVisitor from '@/antlr/visitors/StaticMethodCallVisitor';
 
 export default class StatementVisitor {
   static visitStatement(ctx: StatementContext) {

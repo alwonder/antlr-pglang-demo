@@ -1,4 +1,4 @@
-import LoopWalker from 'antlr/walker/LoopWalker';
+import LoopWalker from '@/antlr/walker/LoopWalker';
 
 export interface Loop {
   loopWalker: LoopWalker;

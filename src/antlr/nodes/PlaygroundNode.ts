@@ -1,4 +1,4 @@
-import { NodeTypes, isRootNode } from 'antlr/NodeTypes';
+import { NodeTypes, isRootNode } from '@/antlr/NodeTypes';
 import {
   isStatementNameProvider,
   isStatementParamProvider,

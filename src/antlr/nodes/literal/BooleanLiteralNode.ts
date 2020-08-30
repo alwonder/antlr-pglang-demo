@@ -1,6 +1,6 @@
-import LiteralNode from 'antlr/nodes/literal/LiteralNode';
-import PlaygroundNode from 'antlr/nodes/PlaygroundNode';
-import { NodeTypes } from 'antlr/NodeTypes';
+import LiteralNode from '@/antlr/nodes/literal/LiteralNode';
+import PlaygroundNode from '@/antlr/nodes/PlaygroundNode';
+import { NodeTypes } from '@/antlr/NodeTypes';
 
 export default class BooleanLiteralNode
   extends PlaygroundNode

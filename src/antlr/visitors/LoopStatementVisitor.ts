@@ -1,10 +1,10 @@
 import {
   LoopStatementContext,
   WhileStatementContext,
-} from 'antlr/generated/PlaygroundParser';
-import LoopStatementNode from 'antlr/nodes/LoopStatementNode';
-import ExpressionVisitor from 'antlr/visitors/ExpressionVisitor';
-import PlaygroundCustomVisitor from 'antlr/visitors/PlaygroundCustomVisitor';
+} from '@/antlr/generated/PlaygroundParser';
+import LoopStatementNode from '@/antlr/nodes/LoopStatementNode';
+import ExpressionVisitor from '@/antlr/visitors/ExpressionVisitor';
+import PlaygroundCustomVisitor from '@/antlr/visitors/PlaygroundCustomVisitor';
 import WhileStatementNode from '../nodes/WhileStatementNode';
 
 export default class LoopStatementVisitor {

@@ -10,34 +10,34 @@ import {
   PrimaryExprContext,
   UnaryExprContext,
   ObjectPropExprContext,
-} from 'antlr/generated/PlaygroundParser';
+} from '@/antlr/generated/PlaygroundParser';
 import ArithmeticExpressionNode, {
   ArithmeticExpressionNodeProps,
-} from 'antlr/nodes/expression/ArithmeticExpressionNode';
+} from '@/antlr/nodes/expression/ArithmeticExpressionNode';
 import BooleanExpressionNode, {
   BooleanExpressionNodeProps,
-} from 'antlr/nodes/expression/BooleanExpressionNode';
+} from '@/antlr/nodes/expression/BooleanExpressionNode';
 import ComparisonExpressionNode, {
   ComparisonExpressionNodeProps,
-} from 'antlr/nodes/expression/ComparisonExpressionNode';
-import ExpressionNode from 'antlr/nodes/expression/ExpressionNode';
-import MethodCallExpressionNode from 'antlr/nodes/expression/MethodCallExpressionNode';
-import StaticMethodCallExpressionNode from 'antlr/nodes/expression/StaticMethodCallExpressionNode';
-import ParenthesesExpressionNode from 'antlr/nodes/expression/ParenthesesExpressionNode';
-import PrimaryExpressionNode from 'antlr/nodes/expression/PrimaryExpressionNode';
-import TwoMembersExpressionNode from 'antlr/nodes/expression/TwoMembersExpressionNode';
-import UnaryExpressionNode from 'antlr/nodes/expression/UnaryExpressionNode';
-import ArithmeticOperatorNode from 'antlr/nodes/operator/ArithmeticOperatorNode';
-import BooleanOperatorNode from 'antlr/nodes/operator/BooleanOperatorNode';
-import ComparisonOperatorNode from 'antlr/nodes/operator/ComparisonOperatorNode';
-import UnaryOperatorNode from 'antlr/nodes/operator/UnaryOperatorNode';
-import LiteralVisitor from 'antlr/visitors/LiteralVisitor';
-import ObjectVisitor from 'antlr/visitors/ObjectVisitor';
-import StaticMethodCallVisitor from 'antlr/visitors/StaticMethodCallVisitor';
-import OperatorVisitor from 'antlr/visitors/OperatorVisitor';
-import PlaygroundCustomVisitor from 'antlr/visitors/PlaygroundCustomVisitor';
-import PlaygroundVisitorError from 'antlr/PlaygroundVisitorError';
-import ObjectPropExpressionNode from 'antlr/nodes/expression/ObjectPropExpressionNode';
+} from '@/antlr/nodes/expression/ComparisonExpressionNode';
+import ExpressionNode from '@/antlr/nodes/expression/ExpressionNode';
+import MethodCallExpressionNode from '@/antlr/nodes/expression/MethodCallExpressionNode';
+import StaticMethodCallExpressionNode from '@/antlr/nodes/expression/StaticMethodCallExpressionNode';
+import ParenthesesExpressionNode from '@/antlr/nodes/expression/ParenthesesExpressionNode';
+import PrimaryExpressionNode from '@/antlr/nodes/expression/PrimaryExpressionNode';
+import TwoMembersExpressionNode from '@/antlr/nodes/expression/TwoMembersExpressionNode';
+import UnaryExpressionNode from '@/antlr/nodes/expression/UnaryExpressionNode';
+import ArithmeticOperatorNode from '@/antlr/nodes/operator/ArithmeticOperatorNode';
+import BooleanOperatorNode from '@/antlr/nodes/operator/BooleanOperatorNode';
+import ComparisonOperatorNode from '@/antlr/nodes/operator/ComparisonOperatorNode';
+import UnaryOperatorNode from '@/antlr/nodes/operator/UnaryOperatorNode';
+import LiteralVisitor from '@/antlr/visitors/LiteralVisitor';
+import ObjectVisitor from '@/antlr/visitors/ObjectVisitor';
+import StaticMethodCallVisitor from '@/antlr/visitors/StaticMethodCallVisitor';
+import OperatorVisitor from '@/antlr/visitors/OperatorVisitor';
+import PlaygroundCustomVisitor from '@/antlr/visitors/PlaygroundCustomVisitor';
+import PlaygroundVisitorError from '@/antlr/PlaygroundVisitorError';
+import ObjectPropExpressionNode from '@/antlr/nodes/expression/ObjectPropExpressionNode';
 
 export default class ExpressionVisitor {
   static visitExpression(ctx: ExpressionContext): ExpressionNode {

@@ -1,1 +1,1 @@
-declare module 'antlr/generated/PlaygroundVisitor';
+declare module '@/antlr/generated/PlaygroundVisitor';

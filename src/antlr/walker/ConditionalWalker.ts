@@ -1,9 +1,9 @@
-import ConditionalNode from 'antlr/nodes/conditional/ConditionalNode';
-import ElseConditionalNode from 'antlr/nodes/conditional/ElseConditionalNode';
-import ElseIfConditionalNode from 'antlr/nodes/conditional/ElseIfConditionalNode';
-import PlaygroundTreeWalker from 'antlr/walker/PlaygroundTreeWalker';
-import { PlaygroundWalkerModule } from 'antlr/walker/PlaygroundWalkerModule';
-import { Scope } from 'antlr/walker/ScopeManager';
+import ConditionalNode from '@/antlr/nodes/conditional/ConditionalNode';
+import ElseConditionalNode from '@/antlr/nodes/conditional/ElseConditionalNode';
+import ElseIfConditionalNode from '@/antlr/nodes/conditional/ElseIfConditionalNode';
+import PlaygroundTreeWalker from '@/antlr/walker/PlaygroundTreeWalker';
+import { PlaygroundWalkerModule } from '@/antlr/walker/PlaygroundWalkerModule';
+import { Scope } from '@/antlr/walker/ScopeManager';
 
 export default class ConditionalWalker implements PlaygroundWalkerModule {
   readonly walker: PlaygroundTreeWalker;
