@@ -9,6 +9,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+    },
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -40,4 +43,7 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  node: {
+    fs: 'empty',
+  },
 };
