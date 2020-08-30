@@ -6,10 +6,11 @@ import {
   isIdentifierNode,
   isExpressionNode,
   isObjectIdentifierNode,
+  isLiteralNode,
 } from '../NodeTypes';
 
 const globalMethods: Record<string, (...args: any[]) => any> = {
-  print: (text: any) => console.log(text),
+  print: (...args: any[]) => console.log(...args),
 };
 
 export default class GlobalMethodService {
@@ -38,6 +39,10 @@ export default class GlobalMethodService {
 
       if (isExpressionNode(param)) {
         return this.walker.calculateExpression(param, scope);
+      }
+
+      if (isLiteralNode(param)) {
+        return param.getValue();
       }
 
       throw new Error('Unknown param type');
