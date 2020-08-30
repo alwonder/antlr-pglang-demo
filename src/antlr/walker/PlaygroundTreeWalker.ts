@@ -20,9 +20,12 @@ import ExpressionWalker from '@/antlr/walker/ExpressionWalker';
 import FunctionManager from '@/antlr/walker/FunctionManager';
 import LoopWalker from '@/antlr/walker/LoopWalker';
 import ScopeManager, { Scope } from '@/antlr/walker/ScopeManager';
+import GlobalMethodService from './GlobalMethodService';
 
 export default class PlaygroundTreeWalker {
   public readonly tree: RootNode;
+
+  private readonly globalMethodService = new GlobalMethodService(this);
 
   private readonly conditionalWalker = new ConditionalWalker(this);
 
@@ -158,6 +161,7 @@ export default class PlaygroundTreeWalker {
     }
 
     if (isStaticMethodCallNode(node)) {
+      this.globalMethodService.handleMethodCallNode(node, scope);
       // No static methods yet either, they were pre-defined too
       return;
     }
