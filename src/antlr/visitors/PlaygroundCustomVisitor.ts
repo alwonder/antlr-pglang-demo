@@ -32,7 +32,6 @@ import OperatorVisitor from 'antlr/visitors/OperatorVisitor';
  * @class PlaygroundCustomVisitor
  * @extends {PlaygroundVisitor}
  */
-// @ts-ignore
 export default class PlaygroundCustomVisitor extends PlaygroundVisitor {
   visitParse(ctx: ParseContext): RootNode {
     const root = new RootNode(PlaygroundCustomVisitor.visitScope(ctx.scope()));

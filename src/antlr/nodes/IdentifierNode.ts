@@ -6,7 +6,7 @@ export default class IdentifierNode extends PlaygroundNode {
 
   private value: string;
 
-  children = [];
+  children: PlaygroundNode[] = [];
 
   constructor(value: string, line: number) {
     super(undefined, line);

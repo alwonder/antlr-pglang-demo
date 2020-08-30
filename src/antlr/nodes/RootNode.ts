@@ -5,7 +5,7 @@ import { NodeTypes } from 'antlr/NodeTypes';
 export default class RootNode extends PlaygroundNode {
   readonly nodeType = NodeTypes.ROOT;
 
-  parent = undefined;
+  readonly parent?: PlaygroundNode = undefined;
 
   /**
    * RootScope has only one ScopeNode child
