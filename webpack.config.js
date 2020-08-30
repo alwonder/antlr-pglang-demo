@@ -1,19 +1,20 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    main: "./src/app.ts",
+    main: './src/app.ts',
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: ['.ts', '.js'],
   },
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "[name].[hash].js",
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].[hash].js',
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   devServer: {
     open: true,
   },
@@ -21,26 +22,22 @@ module.exports = {
     rules: [
       {
         test: /\.ts?$/,
-        use: "ts-loader",
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
+      template: './src/index.html',
+      filename: 'index.html',
     }),
   ],
 };
