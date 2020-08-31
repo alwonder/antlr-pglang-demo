@@ -19,14 +19,11 @@ module.exports = {
     filename: '[name].[hash].js',
   },
   devtool: 'source-map',
-  devServer: {
-    open: true,
-  },
   module: {
     rules: [
       {
         test: /\.ts?$/,
-        use: ['babel-loader', 'ts-loader'],
+        use: ['babel-loader', 'ts-loader?configFile=tsconfig.webpack.json'],
         exclude: /node_modules/,
       },
       {
