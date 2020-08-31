@@ -1,1 +1,3 @@
 src/antlr/generated
+node_modules
+dist
